@@ -1,0 +1,184 @@
+/* Modern Carousel Styles */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    height: 480px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
+}
+
+.carousel-track {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+}
+
+.carousel-card {
+    position: absolute;
+    width: 380px;
+    height: 420px;
+    background: white;
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-lg);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.5s cubic-bezier(0.25, 1, 0.5, 1), z-index 0.5s;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.carousel-card.active {
+    opacity: 1;
+    transform: translateX(0) scale(1) translateZ(0);
+    z-index: 5;
+    pointer-events: auto;
+}
+
+.carousel-card.prev {
+    opacity: 0.6;
+    transform: translateX(-60%) scale(0.85) translateZ(-100px);
+    z-index: 4;
+}
+
+.carousel-card.next {
+    opacity: 0.6;
+    transform: translateX(60%) scale(0.85) translateZ(-100px);
+    z-index: 4;
+}
+
+/* Card Content */
+.card-img-wrapper {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+
+.card-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.carousel-card.active:hover .card-img-wrapper img {
+    transform: scale(1.05);
+}
+
+.card-content {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.card-content h3 {
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+    color: var(--color-primary-dark);
+}
+
+.card-content .properties {
+    list-style: none;
+    margin-bottom: 20px;
+    color: var(--color-text-light);
+    font-size: 0.9rem;
+    flex-grow: 1;
+}
+
+.card-content .properties li {
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.card-content .properties li::before {
+    content: '✓';
+    color: var(--color-accent);
+    font-weight: bold;
+}
+
+.btn-whatsapp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: #25D366;
+    color: white;
+    padding: 12px;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.btn-whatsapp:hover {
+    background-color: #128C7E;
+    transform: translateY(-2px);
+    color: white;
+}
+
+/* Controls */
+.carousel-controls {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.carousel-btn {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: white;
+    border: none;
+    box-shadow: var(--shadow-md);
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: auto;
+    transition: var(--transition);
+}
+
+.carousel-btn:hover {
+    background: var(--color-primary);
+    color: white;
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .carousel-card {
+        width: 300px;
+        height: 400px;
+    }
+    .carousel-card.prev {
+        transform: translateX(-30%) scale(0.85) translateZ(-100px);
+        opacity: 0.3;
+    }
+    .carousel-card.next {
+        transform: translateX(30%) scale(0.85) translateZ(-100px);
+        opacity: 0.3;
+    }
+    .carousel-btn {
+        width: 40px;
+        height: 40px;
+    }
+}

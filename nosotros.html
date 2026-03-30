@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nosotros | Ficem Web</title>
+    <meta name="description" content="Conoce la historia, misión, visión y valores de Ficem, expertos estructurales.">
+    <link rel="stylesheet" href="/src/css/pages.css">
+    <!-- Inline styles for unique Nosotros v2 components -->
+    <style>
+        .history-grid, .mission-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; margin-bottom: 80px; }
+        .history-img { border-radius: var(--border-radius-lg); box-shadow: var(--shadow-lg); width: 100%; transition: transform 0.3s; }
+        .history-img:hover { transform: scale(1.02); }
+        .mission-box { background: var(--color-bg-alt); padding: 50px; border-radius: var(--border-radius-lg); box-shadow: var(--shadow-sm); border-top: 5px solid var(--color-accent); height: 100%; }
+        .vision-box { background: var(--color-primary-dark); color: white; padding: 50px; border-radius: var(--border-radius-lg); box-shadow: var(--shadow-md); border-top: 5px solid var(--color-accent); height: 100%; }
+        .values-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+        .value-card { background: white; border-radius: var(--border-radius); padding: 40px 30px; text-align: center; box-shadow: var(--shadow-md); border-bottom: 4px solid transparent; transition: all 0.3s; }
+        .value-card:hover { transform: translateY(-10px); border-bottom-color: var(--color-accent); box-shadow: var(--shadow-lg); }
+        .value-icon { font-size: 3rem; color: var(--color-accent); margin-bottom: 20px; }
+        @media (max-width: 992px) { .history-grid, .mission-grid { grid-template-columns: 1fr; gap: 40px; } }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="container">
+        <a href="/index.html" class="logo"><div class="logo-icon">F</div>Ficem</a>
+        <button class="menu-toggle" aria-label="Toggle menu">&#9776;</button>
+        <div class="nav-links">
+          <a href="/index.html">Inicio</a>
+          <a href="/nosotros.html" class="active">Nosotros</a>
+          
+          <div class="dropdown">
+              <a href="#">Servicios <span style="font-size: 0.8em; margin-left: 2px;">▼</span></a>
+              <div class="dropdown-content">
+                  <a href="/pages/estructuras.html">Estructuras Metálicas</a>
+                  <a href="/pages/tarflex.html">Mantas Tarflex</a>
+                  <a href="/pages/lona-pvc.html">Mantas Lona PVC</a>
+                  <a href="/pages/toldos.html">Toldos de Precisión</a>
+              </div>
+          </div>
+  
+          <a href="/contacto.html" class="btn btn-primary">Cotizar Ahora</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- 1. Hero Básico -->
+    <header class="page-header" style="background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);">
+        <div class="container">
+            <h1>Nuestra Historia & Filosofía Corporativa</h1>
+            <p>Conoce al equipo técnico que garantiza la seguridad e inversión de cada uno de sus clientes.</p>
+        </div>
+    </header>
+
+    <main class="content-section">
+        <div class="container">
+            <!-- 2. Historia -->
+            <div class="history-grid">
+                <div>
+                    <h2 style="font-size: 2.5rem; margin-bottom: 20px; color: var(--color-primary-dark);">Trayectoria Comprobada</h2>
+                    <p style="margin-bottom: 20px;">En <strong>Ficem</strong>, nacimos con el propósito de resolver las crecientes necesidades de almacenamiento temporal, espacios industriales y logística de protección climática bajo una estructura sólida.</p>
+                    <p style="margin-bottom: 20px;">Iniciamos importando materiales primarios de alta durabilidad (polietileno virgen y lonas), y poco a poco, con inversión en soldadura automatizada y hornos industriales, expandimos nuestra matriz productiva.</p>
+                    <p>Hoy, nuestro equipo de ingenieros estructurales y técnicos de vulcanizado respaldan entregas de coberturas que soportan desde heladas cordilleranas hasta intensa lluvia tropical.</p>
+                </div>
+                <div>
+                    <img src="https://images.unsplash.com/photo-1574359411659-15573a27fd0c?auto=format&fit=crop&q=80&w=800" alt="Instalaciones Ficem" class="history-img">
+                </div>
+            </div>
+
+            <!-- 3. Misión y Visión -->
+            <div class="mission-grid">
+                <div class="mission-box">
+                    <h3 style="font-size: 1.8rem; margin-bottom: 20px; color: var(--color-primary);">Nuestra Misión</h3>
+                    <p>Diseñar, manufacturar e instalar soluciones integrales en coberturas industriales (Mantas, Lonjas PVC y Toldos Arquitectónicos) así como estructuras metálicas de soporte.</p>
+                    <p style="margin-top: 15px;">Dedicamos nuestros recursos a proteger la mercancía y mejorar los espacios operativos de nuestros clientes con los más altos estándares de calidad, seguridad logística y eficacia técnica.</p>
+                </div>
+                <div class="vision-box">
+                    <h3 style="font-size: 1.8rem; margin-bottom: 20px; color: white;">Nuestra Visión</h3>
+                    <p>Ser reconocidos como la corporación líder a nivel nacional en la confección de cobertores para la industria, destacando por nuestra impecable atención post-venta.</p>
+                    <p style="margin-top: 15px;">Proyectamos innovar tecnológicamente nuestros procesos de vulcanizado termo-sellado y diseño estructural 3D, ampliando nuestra presencia a los principales puertos y faenas de la región.</p>
+                </div>
+            </div>
+
+            <!-- 4. Valores (Cards) -->
+            <div style="margin-bottom: 80px;">
+                <h2 style="text-align: center; margin-bottom: 50px; color: var(--color-primary-dark);">Nuestros Valores Core</h2>
+                <div class="values-grid">
+                    <div class="value-card">
+                        <div class="value-icon">💎</div>
+                        <h4>Calidad y Mejora Continua</h4>
+                        <p style="margin-top: 10px; color: var(--color-text-light);">Uso de lonas vírgenes y aceros estructurales normados, revisados meticulosamente.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">🤝</div>
+                        <h4>Compromiso y Éxito del Cliente</h4>
+                        <p style="margin-top: 10px; color: var(--color-text-light);">No estamos satisfechos hasta que el montaje supera tus expectativas.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">⏱️</div>
+                        <h4>Responsabilidad y Puntualidad</h4>
+                        <p style="margin-top: 10px; color: var(--color-text-light);">Consideramos tu tiempo de operación como el activo más importante.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">🌐</div>
+                        <h4>Innovación Técnica</h4>
+                        <p style="margin-top: 10px; color: var(--color-text-light);">Adaptación de procesos de alta costura a la demanda industrial moderna.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 5. CTA Final -->
+    <section class="page-header" style="padding: 60px 0; background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent-hover) 100%);">
+        <div class="container" style="text-align: center;">
+            <h2 style="color: white; font-size: 2.2rem; margin-bottom: 20px;">¿Necesitas proteger tu inversión?</h2>
+            <p style="color: rgba(255,255,255,0.9); margin-bottom: 30px; font-size: 1.1rem;">Escríbenos para enviarle asesoría directa y visitar sus instalaciones.</p>
+            <a href="/contacto.html" class="btn btn-primary" style="background: white; color: var(--color-primary); font-size: 1.1rem;">Contactar Asesor Comercial</a>
+            <a href="https://wa.me/51987654321" class="btn btn-primary" style="background-color: #25D366; color: white; font-size: 1.1rem;">Cotizar por WhatsApp</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo" style="color: white; margin-bottom: 20px;">
+                        <div class="logo-icon" style="background: var(--color-accent);">F</div>Ficem
+                    </div>
+                    <p>Innovación y resistencia en cada proyecto. Tu aliado estratégico en estructuras y protección industrial.</p>
+                </div>
+                <!-- footer links omitted for brevity in code generation, full footprint in index -->
+                <div class="footer-links">
+                  <h4>Servicios</h4>
+                  <ul style="list-style: none; padding: 0;">
+                    <li><a href="/pages/estructuras.html">Diseño de Estructuras</a></li>
+                    <li><a href="/pages/tarflex.html">Mantas Tarflex</a></li>
+                    <li><a href="/pages/lona-pvc.html">Mantas Lona PVC</a></li>
+                    <li><a href="/pages/toldos.html">Toldos de Lona</a></li>
+                  </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Ficem. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="/src/js/main.js"></script>
+</body>
+</html>

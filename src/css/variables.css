@@ -1,0 +1,28 @@
+:root {
+  --color-primary: #1e3a5f; /* Deep Navy Blue */
+  --color-primary-light: #2c5282;
+  --color-primary-dark: #0f1d30;
+  --color-accent: #0ea5e9; /* Celeste / Light Blue */
+  --color-accent-hover: #0284c7;
+  
+  --color-bg: #f8fafc;
+  --color-bg-alt: #ffffff;
+  --color-bg-dark: #111827;
+  
+  --color-text: #334155;
+  --color-text-light: #64748b;
+  --color-text-inverse: #f8fafc;
+  
+  --border-radius: 8px;
+  --border-radius-lg: 16px;
+  --border-color: #e2e8f0;
+  
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+  --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+
+  --font-main: 'Inter', system-ui, -apple-system, sans-serif;
+  --transition: all 0.3s ease;
+  
+  --navbar-height: 80px;
+}
