@@ -11,7 +11,7 @@ export default defineConfig({
         estructuras: resolve(__dirname, 'pages/estructuras.html'),
         tarflex: resolve(__dirname, 'pages/tarflex.html'),
         lonapvc: resolve(__dirname, 'pages/lona-pvc.html'),
-        toldos: resolve(__dirname, 'pages/toldos.html')
+        carpas: resolve(__dirname, 'pages/carpas.html')
       }
     }
   }
